@@ -13,8 +13,10 @@ int main(){
 			for (k=0;k<4;k++){
 				c[i][j] += a[i][k]*b[k][j];
 			}
+			int test;
+			test++;
 			thread_id = omp_get_thread_num();
-			printf("thread_id %d calculou c[%d][%d] = %d\n",thread_id, i, j, c[i][j]);
+			printf("teste: %d thread_id %d calculou c[%d][%d] = %d\n",test, thread_id, i, j, c[i][j]);
 		}
 	}
 	return 0;
